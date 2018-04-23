@@ -1,0 +1,15 @@
+html {
+    font-size: 62.5%;
+    @media #{$tablet-sm-width} {
+        font-size: 75%;
+    }
+    @media #{$desktop-sm-width} {
+        font-size: 100%;
+    }
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
