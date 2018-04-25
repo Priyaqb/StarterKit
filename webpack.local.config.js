@@ -47,5 +47,12 @@ module.exports = [{
         plugins: [
             new ExtractTextPlugin('style.css')
         ]
+    },
+    {
+        entry: ['./src/assets/javascripts/index.js'],
+        output: {
+            path: __dirname + '/dist/js',
+            filename: '[name].js'
+        }
     }
 ]
