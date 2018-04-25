@@ -6,53 +6,63 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path')
 
 module.exports = [{
-        entry: ['./src/index.js'],
-        output: {
-            path: __dirname + '/dist',
-            filename: 'bundle-[hash].js'
-        },
-        module: {
-            rules: [{
-                test: /\.html$/,
-                use: {
-                    loader: 'html-loader?interpolate'
-                }
-            }]
-        },
-        plugins: [
-            new CleanWebpackPlugin(['dist/bundle-*.js'], { watch: true }),
-            new HtmlWebpackPlugin({
-                filename: 'index.html',
-                inject: false,
-                template: './src/index.html'
-            })
-        ],
-        mode: 'development'
+    entry: ['./src/index.js'],
+    output: {
+      path: __dirname + '/dist',
+      filename: 'bundle-[hash].js'
     },
-    {
-        entry: ['./src/assets/stylesheets/index.scss'],
-        output: {
-            path: __dirname + '/dist/styles',
-            filename: '[name].css'
-        },
-        module: {
-            rules: [{
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: ['css-loader', 'sass-loader']
-                })
-            }]
-        },
-        plugins: [
-            new ExtractTextPlugin('style.css')
-        ]
-    },
-    {
-        entry: ['./src/assets/javascripts/index.js'],
-        output: {
-            path: __dirname + '/dist/js',
-            filename: '[name].js'
+    module: {
+      rules: [{
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader?interpolate'
         }
-    }
+      }]
+    },
+    plugins: [
+      new CleanWebpackPlugin(['dist/bundle-*.js'], {
+        watch: true
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'index.html',
+        inject: false,
+        template: './src/index.html'
+      })
+    ],
+    mode: 'development'
+  },
+  {
+    entry: ['./src/assets/stylesheets/index.scss'],
+    output: {
+      path: __dirname + '/dist/styles',
+      filename: '[name].css'
+    },
+    module: {
+      rules: [{
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: ['css-loader', 'sass-loader']
+        })
+      }]
+    },
+    plugins: [
+      new ExtractTextPlugin('style.css'),
+    ]
+  },
+  {
+    entry: ['./src/assets/javascripts/index.js'],
+    output: {
+      path: __dirname + '/dist/js',
+      filename: '[name].js'
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        "$": "jquery",
+        "jquery": "jquery",
+        "jQuery": "jquery",
+        "window.jQuery": "jquery"
+      }),
+    ]
+  }
 ]
