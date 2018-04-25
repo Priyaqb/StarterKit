@@ -1,123 +1,181 @@
 .site-header {
-    background-color: $color-primary-bg;
-    box-shadow: 0 .1rem .3rem 0 rgba(0, 0, 0, .1);
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    position: relative;
+  background-color: $color-primary-bg;
+  box-shadow: 0 .1rem .3rem 0 rgba(0, 0, 0, .1);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  position: relative;
+  @media #{$tablet-sm-width} {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .site-logo {
+    margin: 0 0 0 5rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
     @media #{$tablet-sm-width} {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        padding-left: 5rem;
-        padding-right: 5rem;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  .hide-menu .menu__item {
+    position: absolute;
+    transform: translateX(-150%);
+  }
+
+  .show-menu .menu__item {
+    transform: translateX(0);
+    transition: .5s;
+  }
+
+  .menu__item {
+    list-style: none;
+    padding: 1.2rem 1.5rem 1.2rem 5rem;
+
+    @media #{$tablet-sm-width} {
+      padding: 0 1.5rem 0 0;
     }
 
-    .menu {
-        display: flex;
-        flex-direction: column;
-        padding-left: 0;
-        @media #{$tablet-sm-width} {
-            align-items: center;
-            flex-direction: row;
-        }
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $color-menu-border;
+      @media #{$tablet-sm-width} {
+        border-bottom: 0;
+      }
     }
+  }
 
-    .menu__item {
-        border-bottom: 1px solid $color-menu-border;
-        list-style: none;
-        padding: 1.2rem 1.5rem 1.2rem 5rem;
+  .site-logo__link {
+    color: $color-base;
+    font-size: 2.4rem;
+    text-decoration: none;
+  }
 
-        @media #{$tablet-sm-width} {
-            border-bottom: 0;
-            padding: 0 1.5rem 0 0;
-        }
-    }
+  .menu__link {
+    color: $color-base;
+    font-size: 2rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    position: relative;
+    text-decoration: none;
 
-    .site-logo__link {
-        color: $color-base;
-        font-size: 3rem;
-        text-decoration: none;
-    }
-
-    .menu__link {
-        color: $color-base;
-        font-size: 2rem;
-        padding-bottom: .5rem;
-        padding-top: .5rem;
-        position: relative;
-        text-decoration: none;
-
-        @media #{$tablet-sm-width} {
-            &::after,
-            &::before {
-                content: '';
-                height: 100%;
-                position: absolute;
-                top: 0;
-                transition: width 0.5s;
-                width: 0;
-            }
-
-            &:hover {
-                &::before {
-                    border-top: 1px solid $color-button-primary;
-                    right: 0;
-                    width: 100%;
-                }
-
-                &::after {
-                    border-bottom: 1px solid $color-button-primary;
-                    left: 0;
-                    width: 100%;
-                }
-            }
-        }
-        @media #{$tablet-sm-width} {
-            font-size: 1.4rem;
-        }
-        @media #{$desktop-sm-width} {
-            font-size: 1rem;
-        }
-    }
-
-    .header__button--normal {
-        background-color: transparent;
-        border: 1px solid $color-button-primary;
-        color: $color-button-primary;
-        display: inline-block;
-        letter-spacing: 4px;
-        margin: 1.2rem 0 1.2rem 5rem;
-        padding: .875rem 2rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: background-color .3s ease;
-
-        &:hover {
-            background-color: $color-button-primary;
-            color: $color-button-hover;
-        }
-        @media #{$tablet-sm-width} {
-            margin: 0;
-        }
-    }
-
-    .header__button--toggle {
-        display: inline-block;
+    @media #{$tablet-sm-width} {
+      &::after,
+      &::before {
+        content: '';
+        height: 100%;
         position: absolute;
-        right: 30px;
-        top: 30px;
-        width: 30px;
-        @media #{$tablet-sm-width} {
-            display: none;
+        top: 0;
+        transition: width 0.5s;
+        width: 0;
+      }
+
+      &:hover {
+        &::before {
+          border-top: 1px solid $color-button-primary;
+          right: 0;
+          width: 100%;
         }
+
+        &::after {
+          border-bottom: 1px solid $color-button-primary;
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+    @media #{$tablet-sm-width} {
+      font-size: 1.4rem;
+    }
+    @media #{$desktop-sm-width} {
+      font-size: 1rem;
+    }
+  }
+
+  .header__button--normal {
+    background-color: transparent;
+    border: 1px solid $color-button-primary;
+    color: $color-button-primary;
+    display: inline-block;
+    font-size: .82rem;
+    letter-spacing: 2px;
+    padding: .875rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: $color-button-primary;
+      color: $color-button-hover;
+    }
+  }
+
+  .header__button--toggle {
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    width: 30px;
+    @media #{$tablet-sm-width} {
+      display: none;
     }
 
-    .line {
-        background-color: $color-base;
-        display: block;
-        height: 3px;
-        margin-bottom: 5px;
-        transition: transform .5s ease;
-        width: 100%;
+    &.open {
+      .line {
+        &:nth-child(1) {
+          left: 8px;
+          top: -5px;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          width: 0%;
+        }
+
+        &:nth-child(3) {
+          left: 8px;
+          top: 16px;
+          transform: rotate(-45deg);
+        }
+      }
     }
+  }
+
+  .line {
+    background-color: $color-base;
+    display: block;
+    height: 4px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    transform: rotate(0deg);
+    transform-origin: left center;
+    transition: .25s ease-in-out;
+    width: 100%;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 10px;
+    }
+
+    &:nth-child(3) {
+      top: 20px;
+    }
+  }
+
 }
