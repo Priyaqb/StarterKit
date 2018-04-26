@@ -1,0 +1,42 @@
+.site-footer {
+  background-color: $color-primary-bg;
+  margin-top: 4rem;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+
+  .align--center {
+    text-align: center;
+  }
+
+  .link--footer {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+
+  .footer__social-icons {
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+  }
+
+  .footer__social-icon {
+    fill: #a4a4a4;
+
+    &:hover {
+      fill: $color-base;
+      transition: fill .3s linear;
+    }
+  }
+
+  .footer__social-link {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+
+  .footer__copyright {
+    border-top: 1px solid #333;
+    color: $color-text-primary;
+    font-size: .8rem;
+    margin-bottom: 0;
+    padding-top: 1rem;
+  }
+}

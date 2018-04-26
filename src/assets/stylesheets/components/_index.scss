@@ -1,2 +1,44 @@
-@import "header";
-@import "footer";
+@import 'header';
+@import 'footer';
+
+//Common Styles
+.link {
+  color: $color-text-primary;
+  font-size: 2rem;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+  position: relative;
+  text-decoration: none;
+  @media #{$tablet-sm-width} {
+    &::after,
+    &::before {
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transition: width .5s;
+      width: 0;
+    }
+
+    &:hover {
+      color: $color-base;
+      &::before {
+        border-top: 1px solid $color-button-primary;
+        right: 0;
+        width: 100%;
+      }
+
+      &::after {
+        border-bottom: 1px solid $color-button-primary;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  @media #{$tablet-sm-width} {
+    font-size: 1.4rem;
+  }
+  @media #{$desktop-sm-width} {
+    font-size: 1rem;
+  }
+}
