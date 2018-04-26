@@ -2,6 +2,10 @@
 @import 'footer';
 
 //Common Styles
+.align--center {
+  text-align: center;
+}
+
 .link {
   color: $color-text-primary;
   font-size: 2rem;
