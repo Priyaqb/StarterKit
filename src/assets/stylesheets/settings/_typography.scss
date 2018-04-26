@@ -1,9 +1,22 @@
+// @font-face {
+//   font-family: 'OpenSans-Regular';
+//   src: url('/fonts/OpenSans-Regular.eot');
+//   src: url('/fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+//   url('/fonts/OpenSans-Regular.ttf') format('truetype');
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('/fonts/OpenSans-Bold.eot') format('eot'), url('/fonts/OpenSans-Bold.ttf');
+}
 @font-face {
   font-family: 'OpenSans-Regular';
-  src: url('/fonts/OpenSans-Regular.eot');
-  src: url('/fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/OpenSans-Regular.ttf') format('truetype');
-  font-style: normal;
+  src: url('/fonts/OpenSans-Regular.eot') format('eot'), url('/fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('/fonts/OpenSans-Light.eot') format('eot'), url('/fonts/OpenSans-Light.ttf');
 }
 
-$default-font: 'OpenSans-Regular', sans-serif;
+$default-font: 'OpenSans-Regular', sans-serif, Arial;

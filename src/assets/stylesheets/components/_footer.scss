@@ -1,0 +1,48 @@
+.site-footer {
+  background-color: $color-primary-bg;
+  margin-top: 4rem;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+
+  .link--footer {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+
+  .footer {
+    &__links {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    &__social-icons {
+      margin-bottom: 4rem;
+      margin-top: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    &__social-icon {
+      fill: $color-svg-fill;
+
+      &:hover {
+        fill: $color-base;
+        transition: fill .3s linear;
+      }
+    }
+
+    &__social-link {
+      display: inline-block;
+      margin-right: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    &__copyright {
+      border-top: 1px solid $color-seperator-primary;
+      color: $color-text-primary;
+      font-size: .8rem;
+      margin-bottom: 0;
+      padding-top: 1rem;
+    }
+  }
+}
