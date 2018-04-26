@@ -8,6 +8,11 @@
     text-align: center;
   }
 
+  .footer__links{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .link--footer {
     display: inline-block;
     margin-right: 2rem;
@@ -16,10 +21,12 @@
   .footer__social-icons {
     margin-bottom: 4rem;
     margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .footer__social-icon {
-    fill: #a4a4a4;
+    fill: $color-svg-fill;
 
     &:hover {
       fill: $color-base;
@@ -30,10 +37,11 @@
   .footer__social-link {
     display: inline-block;
     margin-right: 2rem;
+    padding-bottom: 1rem;
   }
 
   .footer__copyright {
-    border-top: 1px solid #333;
+    border-top: 1px solid $color-seperator-primary;
     color: $color-text-primary;
     font-size: .8rem;
     margin-bottom: 0;
