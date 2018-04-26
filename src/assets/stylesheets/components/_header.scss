@@ -1,15 +1,13 @@
 .site-header {
   background-color: $color-primary-bg;
   box-shadow: 0 .1rem .3rem 0 rgba(0, 0, 0, .1);
-  padding-bottom: 1rem;
   padding-top: 1rem;
   position: relative;
   @media #{$tablet-sm-width} {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 0 5rem;
   }
 
   .site-logo {
@@ -100,20 +98,26 @@
   }
 
   .header__button--normal {
-    background-color: transparent;
-    border: 1px solid $color-button-primary;
-    color: $color-button-primary;
-    display: inline-block;
-    font-size: .82rem;
-    letter-spacing: 2px;
-    padding: .875rem 2rem;
+    background-color: $color-button-primary;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: $color-base;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+    padding: 6px 15px 7px;
     text-decoration: none;
-    text-transform: uppercase;
-    transition: background-color .3s ease;
+    text-shadow: none;
+    transition-duration: 300ms;
+    transition-property: background, color, border;
+    transition-timing-function: linear;
+    vertical-align: top;
 
     &:hover {
-      background-color: $color-button-primary;
-      color: $color-button-hover;
+      background-color: $color-button-bg-hover;
     }
   }
 
@@ -156,7 +160,7 @@
   .line {
     background-color: $color-base;
     display: block;
-    height: 4px;
+    height: 3px;
     left: 0;
     opacity: 1;
     position: absolute;
@@ -170,11 +174,11 @@
     }
 
     &:nth-child(2) {
-      top: 10px;
+      top: 8px;
     }
 
     &:nth-child(3) {
-      top: 20px;
+      top: 16px;
     }
   }
 
