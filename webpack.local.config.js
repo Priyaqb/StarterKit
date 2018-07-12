@@ -9,8 +9,8 @@ var path = require('path')
 module.exports = [{
         entry: ['./src/index.js'],
         output: {
-            path: __dirname + '/dist',
-            filename: 'bundle-[hash].js'
+            filename: 'bundle.js',
+            path: path.resolve(__dirname, 'dist')
         },
         module: {
             rules: [{
@@ -21,7 +21,7 @@ module.exports = [{
             }]
         },
         plugins: [
-            new CleanWebpackPlugin(['dist/bundle-*.js'], {
+            new CleanWebpackPlugin(['dist/bundle.js'], {
                 watch: true
             }),
             new HtmlWebpackPlugin({
@@ -39,8 +39,8 @@ module.exports = [{
     {
         entry: ['./src/assets/stylesheets/index.scss'],
         output: {
-            path: __dirname + '/dist/styles',
-            filename: '[name].css'
+            filename: '[name].css',
+            path: path.resolve(__dirname, 'dist/styles')
         },
         module: {
             rules: [{
@@ -67,8 +67,9 @@ module.exports = [{
     {
         entry: ['./src/assets/javascripts/index.js'],
         output: {
-            path: __dirname + '/dist/js',
-            filename: '[name].js'
+            filename: '[name].js',
+            path: path.resolve(__dirname, 'dist/js'),
+
         },
         plugins: [
             new webpack.ProvidePlugin({
