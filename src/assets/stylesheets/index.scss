@@ -1,3 +1,37 @@
 @import "settings/index";
 @import "elements/index";
 @import "components/index";
+
+.container {
+	display: flex;
+}
+.sidebar {
+  	position: fixed;
+    background-color: #1b1c1d;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    min-height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 250px;
+    z-index: 1;
+
+    h3 {
+        color: #fff;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    a {
+    	color: rgba(255,255,255,.5);
+    	display: block;
+    	padding: 10px;
+    	text-decoration: none;
+    }
+}
+.content {
+    flex: 1 1 auto;
+    margin-left: 270px;
+    min-width: 0px;
+    padding-right: 20px;
+}

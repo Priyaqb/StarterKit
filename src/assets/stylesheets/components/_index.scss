@@ -1,6 +1,4 @@
-@import 'header';
-@import 'footer';
-
+/* @import '../settings/index';
 //Common Styles
 .align--center {
   text-align: center;
@@ -46,3 +44,7 @@
     font-size: 1rem;
   }
 }
+ */
+@import "footer/index";
+@import "header/index";
+@import "normal-form/index";

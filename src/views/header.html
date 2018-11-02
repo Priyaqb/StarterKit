@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Starter-Kit</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="../styles/main.css" rel="stylesheet">
+    <link href="../libs/prism/prism.css" rel="stylesheet">
+    <style>
+        .sidebar a[href$="header.html"] {
+          color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        ${require('../components/sidebar.html')}
+        <div class="content">
+            <div>${require('../components/header.html')}</div>
+            <div class="wrap-code">
+                <div class="block-code">
+                    <h2>HTML:</h2>
+                    <button id="copyHTMLButton">Copy</button>
+                    <div class="code" id="copyHTMLTarget">
+                        <pre class="language-markup"><code><script type="text/plain">${require('../components/header.html')}</script></code></pre>
+                    </div>
+                </div>
+                <div class="block-code">
+                    <h2>CSS: </h2>
+                    <button id="copyCSSButton">Copy</button>
+                    <div class="code" id="copyCSSTarget">
+                        <pre data-src="../styles/header.css"> </pre></div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <script src="../libs/prism/prism.js"></script>
+    <script src="../libs/prism/prism-embed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

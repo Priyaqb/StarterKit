@@ -24,7 +24,10 @@
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15"
+    "webpack-cli": "^2.0.15",
+    "webpack-glob-entries": "^1.0.1",
+    "webpack-glob-folder-entries": "^1.0.0",
+    "webpack-sweet-entry": "^1.1.5"
   },
   "author": "",
   "license": "ISC",
@@ -32,5 +35,13 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "latest-version": "^3.1.0"
-  }
+  },
+  "browserslist": [
+    "> 0.3%",
+    "Chrome >= 30",
+    "last 7 versions",
+    "Android >= 4",
+    "Firefox >= 20",
+    "iOS >= 8"
+  ]
 }
