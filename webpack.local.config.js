@@ -94,6 +94,7 @@ module.exports = [{
             header: "./src/assets/stylesheets/components/header/index.scss",
             footer: "./src/assets/stylesheets/components/footer/index.scss",
             normalForm: "./src/assets/stylesheets/components/normal-form/index.scss",
+            shippingForm: "./src/assets/stylesheets/components/shipping-form/index.scss"
         },
         //entry: glob.sync('./src/assets/stylesheets/**/*.scss'),
         output: {

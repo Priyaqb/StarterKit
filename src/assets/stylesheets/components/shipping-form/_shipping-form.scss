@@ -1,0 +1,23 @@
+.flex-row {
+    display: flex;
+}
+.flex-block-space {
+	margin-left: -15px;
+
+	.flex-block {
+		margin-left: 15px;
+	    display: flex;
+	    flex-direction: column;
+	    flex: 1;
+
+		&.flex-9 {
+			flex-basis: 65%; 
+		}
+	}
+}
+
+
+.ui-icon {
+	display: inline-block;
+	float: left;
+}

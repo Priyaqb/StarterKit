@@ -35,3 +35,20 @@
     min-width: 0px;
     padding-right: 20px;
 }
+
+.wrap-code {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+
+    .block-code {
+        flex: 0 1 49%;
+        overflow: hidden;
+    }
+}
+
+.code {
+    height: 200px;
+    overflow: auto;
+}

@@ -10,6 +10,9 @@
     <meta name="keywords" content="" />
     <link href="../styles/main.css" rel="stylesheet">
     <link href="../libs/prism/prism.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/country-region-dropdown-menu/1.2.1/geodatasource-countryflag.min.css" rel="stylesheet">
     <style>
         .sidebar a[href$="form.html"] {
           color: #fff;
@@ -26,16 +29,34 @@
             <div class="wrap-code">
                 <div class="block-code">
                     <h2>HTML:</h2>
-                    <button id="copyHTMLButton">Copy</button>
+                    <button data-attr="copyHTMLTarget" class="copyCode">Copy</button>
                     <div class="code" id="copyHTMLTarget">
                         <pre class="language-markup"><code><script type="text/plain">${require('../components/normal-form.html')}</script></code></pre>
                     </div>
                 </div>
                 <div class="block-code">
                     <h2>CSS: </h2>
-                    <button id="copyCSSButton">Copy</button>
+                    <button data-attr="copyCSSTarget" class="copyCode">Copy</button>
                     <div class="code"  id="copyCSSTarget">
                         <pre data-src="../styles/normalForm.css"> </pre></div>
+                </div>
+            </div>
+            <h2>Shipping Info Form</h2>
+            <span style="color: red">NB: Added <a href="">country-region-dropdown-menu</a> plugin for country dopdown with flags</span>
+            <div>${require('../components/shipping-info-form.html')}</div>
+            <div class="wrap-code">
+                <div class="block-code">
+                    <h2>HTML:</h2>
+                    <button data-attr="copyHTMLTarget1" class="copyCode">Copy</button>
+                    <div class="code" id="copyHTMLTarget1">
+                        <pre class="language-markup"><code><script type="text/plain">${require('../components/shipping-info-form.html')}</script></code></pre>
+                    </div>
+                </div>
+                <div class="block-code">
+                    <h2>CSS: </h2>
+                    <button data-attr="copyCSSTarget1" class="copyCode">Copy</button>
+                    <div class="code"  id="copyCSSTarget1">
+                        <pre data-src="../styles/shippingForm.css"> </pre></div>
                 </div>
             </div>
         </div>
@@ -43,6 +64,10 @@
     <script src="../libs/prism/prism.js"></script>
     <script src="../libs/prism/prism-embed.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/country-region-dropdown-menu/1.2.1/geodatasource-cr.min.js"></script>
+
     <script src="../js/main.js"></script>
 </body>
 

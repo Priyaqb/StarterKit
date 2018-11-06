@@ -1,0 +1,60 @@
+<form>
+    <h3 class="sub-title">Shipping Information</h3>
+    <div class="form-group">
+        <label>Name</label>
+        <div class="flex-row flex-block-space">
+            <input type="text" class="form-control flex-block" name="first-name" placeholder="First Name">
+            <input type="text" class="form-control flex-block" name="last-name" placeholder="Last Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Billing Address</label>
+        <div class="flex-row flex-block-space">
+            <input type="text" class="form-control flex-block flex-9" name="last-name" placeholder="Billing Address">
+            <input type="text" name="shipping[address-2]" placeholder="Apt #" class="form-control flex-block">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="flex-row flex-block-space">
+            <div class="flex-block">
+                <label>State</label>
+                <input type="text" class="form-control" name="state" placeholder="State">
+            </div>
+            <div class="flex-block">
+                <label>Country</label>
+                <select class="gds-cr gds-countryflag" country-data-region-id="gds-cr-three"></select>
+                <span style="visibility: hidden;">Region: </span>
+                <select style="visibility: hidden;" id="gds-cr-three"></select>
+                <!-- <div class="niceCountryInputSelector" style="width: 300px;" data-selectedcountry="US" data-showspecial="false" data-showflags="true" data-i18nall="All selected"
+            data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback" /> -->
+            </div>
+        </div>
+    </div>
+    <h3 class="sub-title">Billing Information</h3>
+    <div class="form-group">
+        <label>Card Type</label>
+        <div class="flex-row flex-block-space">
+            <input type="text" class="form-control flex-block" name="state" placeholder="State">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="flex-row flex-block-space">
+            <div class="flex-block flex-9">
+                <label>Card Number</label>
+                <input type="text" name="" placeholder="Card #" class="form-control">
+            </div>
+            <div class="flex-block">
+                <label>CVC</label>
+                <input type="text" name="" placeholder="CVC" class="form-control">
+            </div>
+            <div class="flex-block">
+                <label>Expiration</label>
+                <div class="flex-row flex-block-space">
+                    <input type="text" name="" placeholder="Card #" class="flex-block form-control">
+                    <input type="text" name="" placeholder="Card #" class="flex-block form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn" type="submit">Submit</button>
+</form>

@@ -25,13 +25,15 @@ jQuery(document).ready(function($) {
         }
     }
 
-    document.getElementById("copyHTMLButton").addEventListener("click", function() {
-        copyToClipboard(document.getElementById("copyHTMLTarget"));
-    });
+    $(".copyCode").on("click",function() {
+        var test = $(this).attr("data-attr");
+        console.log(test)
 
-    document.getElementById("copyCSSButton").addEventListener("click", function() {
-        copyToClipboard(document.getElementById("copyCSSTarget"));
-    });
+        var target = $('#'+test)[0];
+        console.log(target)
+
+        copyToClipboard(target);
+    })
 
     function copyToClipboard(elem) {
         // create hidden text element, if it doesn't already exist
@@ -82,4 +84,9 @@ jQuery(document).ready(function($) {
         }
         return succeed;
     }
+
+
+            
 });
+
+         
